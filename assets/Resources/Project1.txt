@@ -1,0 +1,12 @@
+Idea APIs:
+https://apilist.fun/
+https://api.nasa.gov/
+https://developer.vonage.com/en/blog/the-ultimate-list-of-fun-apis-for-your-next-coding-project
+
+https://github.com/public-apis/public-apis#geocodinghttps://github.com/public-apis/public-apis#entertainment
+https://github.com/public-apis/public-apis#machine-learning
+https://github.com/public-apis/public-apis
+https://github.com/davemachado/public-api
+https://github.com/public-api-lists/public-api-lists
+https://github.com/florinpop17?page=3&tab=repositories
+https://github.com/public-api-lists/public-api-lists
