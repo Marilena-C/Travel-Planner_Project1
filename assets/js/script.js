@@ -41,12 +41,9 @@ $('#form').on('submit', function(event) {
             console.log("CO2 Emission (Flight) = "+response.trips[0].steps[0].transport.type)
             // console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
             $('#emissionData').html(
-                `<p id="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
-                <p id ="mainTextToformat"> => ${response.trips[0].co2e} kg</p>`
-                
-
-
-            )
+                `<p class="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
+                <p class ="mainTextToformat"> => ${response.trips[0].co2e} kg</p>`
+                )
         })
         .catch(err => console.error(err));
 
@@ -140,20 +137,21 @@ $('#form-2').on('submit', function(event) {
             }
 
             $('#emissionData').html(
-                `<p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
-                <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
-                                    ---------------------------
-                <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
-                <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>`
-
+                `<p class="dataTitle">CO2 Emission (Total)</p>
+                 <p class="mainTextToformat">=> ${response.trips[0].co2e.toFixed(2)} kg</p>`
 
             )
         })
         .catch(err => console.error(err));
 })
 
+// create a template literl to print details of advanced search 
 
-
+// `<p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
+// <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
+//                     ---------------------------
+// <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
+// <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>`
 
 
  
