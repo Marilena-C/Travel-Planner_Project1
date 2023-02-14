@@ -38,6 +38,7 @@ input[type=text], select {
     background-color: #323741;
     color: white;
     min-height: 5rem;
+    border-radius: 10px;
     
   }
 
