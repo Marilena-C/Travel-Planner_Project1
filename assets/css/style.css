@@ -33,3 +33,11 @@ input[type=text], select {
     background-color: #f2f2f2;
     min-height: 5rem;
   }
+
+  #eco, #planet {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
