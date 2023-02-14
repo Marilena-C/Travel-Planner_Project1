@@ -29,7 +29,29 @@ input[type=text], select {
     padding: 20px;
   }
 
-  #emissionData{
-    background-color: #f2f2f2;
+.mainDisplayCont{
+    padding-top: 5%;
+}
+
+  .mainDataDisplay{
+    /* background-color: #f2f2f2; */
+    background-color: #323741;
+    color: white;
     min-height: 5rem;
+    
   }
+
+  #mainTextToformat{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+  }
+
+  #dataTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+ 
