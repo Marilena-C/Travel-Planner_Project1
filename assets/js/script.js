@@ -5,7 +5,7 @@ $('#form').on('submit', function(event) {
     var cityTo = $('#to').val()
     var waysInput = $('#ways').val()
     var peopleInput = $('#people').val()
-    var transportInput = $('#transport').val()
+    var transportInput = $('#transport').val().trim().split(" ")
     var titleInput = $('#title').val()
 
     console.log(cityFrom,cityTo)
@@ -19,7 +19,7 @@ $('#form').on('submit', function(event) {
         people:peopleInput,
         language:"en",
         title:titleInput,
-        transport_types:["flying","public-transport","driving"]
+        transport_types:transportInput
     }
     ///////////////////// My additional the JS provides a click func to the About //////////////////
     $(function() {
@@ -34,7 +34,7 @@ $('#form').on('submit', function(event) {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': 'c0e654e005msh4c9a90bb5005fbbp1284cdjsn75b2a3c5f094',
+            'X-RapidAPI-Key': '0235af8babmshebb41620d6f9cd4p1547e5jsn6089cb69e349',
             'X-RapidAPI-Host': 'travel-co2-climate-carbon-emissions.p.rapidapi.com'
         },
         // body: '{"from":"Berlin, Germany","to":"Stockholm, Sweden","ways":2,"people":2,"language":"en","title":"Comparing flying and public transport from Berlin to Stockholm.","transport_types":["flying","public-transport","driving"]}' 
@@ -45,21 +45,20 @@ $('#form').on('submit', function(event) {
         .then(response => response.json())
         .then(response => {console.log(response)
             console.log("CO2 Emission (Flight) = "+response.trips[0].co2e)
-            console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
+            console.log("CO2 Emission (Flight) = "+response.trips[0].steps[0].transport.type)
+            // console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
             $('#emissionData').html(
-                `<p>CO2 Emission (Flight) = ${response.trips[0].co2e} kg</p>
-                <p>CO2 Emission (Public Transport) = ${response.trips[1].co2e} kg</p>
-                <p>CO2 Emission (driving) = ${response.trips[2].co2e} kg</p>
-                <p> ${cityFrom}</p>`
-                
-
-
-            )
+                `<p class="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
+                <p class ="mainTextToformat"> => ${response.trips[0].co2e} kg</p>`
+                )
         })
         .catch(err => console.error(err));
 
 
 })
+
+{/* <p>CO2 Emission (Public Transport) = ${response.trips[1].co2e} kg</p>
+<p>CO2 Emission (driving) = ${response.trips[2].co2e} kg</p> */}
 
 
 // Intra city emission estimation
@@ -145,20 +144,21 @@ $('#form-2').on('submit', function(event) {
             }
 
             $('#emissionData').html(
-                `<p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
-                <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
-                                    ---------------------------
-                <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
-                <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>`
-
+                `<p class="dataTitle">CO2 Emission (Total)</p>
+                 <p class="mainTextToformat">=> ${response.trips[0].co2e.toFixed(2)} kg</p>`
 
             )
         })
         .catch(err => console.error(err));
 })
 
+// create a template literl to print details of advanced search 
 
-
+// `<p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
+// <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
+//                     ---------------------------
+// <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
+// <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>`
 
 
  

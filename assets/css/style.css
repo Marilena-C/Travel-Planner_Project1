@@ -29,18 +29,104 @@ input[type=text], select {
     padding: 20px;
   }
 
-  #emissionData{
-    background-color: #f2f2f2;
+.mainDisplayCont{
+    padding-top: 5%;
+}
+
+  .mainDataDisplay{
+    /* background-color: #f2f2f2; */
+    background-color: #323741;
+    color: white;
     min-height: 5rem;
+    border-radius: 10px;
+    
   }
 
-  #eco, #planet {
-    max-width: 200px;
-    height: auto;
+  .mainTextToformat{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+  }
+
+  .dataTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Contact section styling - heading and cards*/
+   .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+<<<<<<< HEAD
     display: block;
-    margin: 0 auto;
   }
+  .container {
+    max-width: 1880px !important; 
+=======
+  }
+  .container {
+    max-width: 1140px;
+>>>>>>> 54da2c2f918bafb3d2a94f7f2baecbc4b4362874
+  }
+  .sectionText {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: #b1eefd;
+}
+.contact-section {
+    padding: 2px;
+}
 
-  .modal-body, p {
-    text-decoration:brown;
-  }
+.contact-section .card {
+  border: 20px;
+  align-items: center;
+  border-bottom: 0.25rem solid #75b8e2;
+<<<<<<< HEAD
+  display: block;
+=======
+>>>>>>> 54da2c2f918bafb3d2a94f7f2baecbc4b4362874
+}
+
+.contact-section .card h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+}
+
+.contact-section .card hr {
+  border-color: #1293e9;
+  border-width: 0.25rem;
+  width: 100%;
+}
+
+.contact-section .card img {
+  width: 50px;
+  padding: 5px;
+}
+ 
+<<<<<<< HEAD
+/*Footer*/
+footer {
+  padding: 5px 0;
+  text-align: center;
+  color: rgba(3, 14, 74, 0.3);
+=======
+.container {
+  max-width: 1140px;
+}
+/*Footer*/
+footer {
+  padding: 15px 0;
+  text-align: center;
+  color: rgba(7, 24, 131, 0.3);
+>>>>>>> 54da2c2f918bafb3d2a94f7f2baecbc4b4362874
+  background-color: rgb(190, 242, 170);
+}
