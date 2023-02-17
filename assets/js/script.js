@@ -20,12 +20,6 @@ var firstForecastCont = $('#forecast-1')
 var secForecastCont = $('#forecast-2')
 var trdForecastCont = $('#forecast-3')
 
- 
- // var fthForecastCont = $('#forecast-4')
- // var fifthForecastCont = $('#forecast-5')
-
-
-
 // // Form inputs grabs
 $('#form').on('submit', function(event) {
     event.preventDefault()
@@ -494,21 +488,7 @@ placementId.html(todayDataWrap)
 
 
 
-// console.log("An example to use setTimeout");
-// function first() {
-// console.log("1st Call");
-// }
-// function second() {
-// console.log("2nd Call");
-// }
-// function third() {
-// console.log("3rd Call");
-// }
-// setTimeout(function () {
-// first();
-// }, 3000);
-// second();
-// third();
+
  
 
 
