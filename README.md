@@ -59,8 +59,7 @@ In terms of technology, we've been using the server APIs mentioned above, web AP
 
 
  ## Screenshots
-First commit:
-![Alt text](Travel-Planner_Project1/assets/images/firstCommitGithub.jpg)
+Github page:![Github_page_Project1](https://user-images.githubusercontent.com/118940228/219758434-11532e68-001e-4712-8ed7-2c7758cce449.png)
 
 Deployed page: 
 ![Alt text](assets/images/DeployedPage_Travel.png)
