@@ -1,3 +1,8 @@
+*{
+  font-family: 'Poppins',sans-serif;
+}
+
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -55,4 +60,408 @@ input[type=text], select {
     font-size: 18px;
   }
 
- 
+
+  a {
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none !important;
+    position: relative;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+  
+  
+  .hoverable{
+    transition-duration: .3s;
+  }
+  
+  .hoverable:hover, .hoverable:active, .hoverable:focus{
+    transform: translateY(-5px);
+  }
+  .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  
+  
+  @media (min-width: 768px) {
+    .navbar{
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+    }
+   
+  }
+  
+  
+  .page-title {
+    opacity: .75 !important;
+  }
+  
+  
+  .navbar{
+    text-align: center ;
+    float: none;
+    display: flex;
+    width: 100%;
+    font-size: medium;
+  }
+
+  body {
+   
+    background-image: url(../images/pexels-pixabay-66869.jpg);
+  }
+
+  section.contact form {
+    margin-top: 50px;
+  }
+  
+  section.contact form .field {
+    margin-bottom: -10px;
+  }
+  
+  section.contact form label,
+  section.contact form input,
+  section.contact form textarea {
+    border: 2px solid rgba(72, 216, 164, 0);
+    width: 100%;
+    display: block;
+    padding: 1.2rem 0.6rem 0.4rem;
+  }
+  
+  section.contact form label::-webkit-input-placeholder,
+  section.contact form input::-webkit-input-placeholder,
+  section.contact form textarea::-webkit-input-placeholder {
+    color: white;
+  }
+  
+  section.contact form label:-ms-input-placeholder,
+  section.contact form input:-ms-input-placeholder,
+  section.contact form textarea:-ms-input-placeholder {
+    color: white;
+  }
+  
+  section.contact form label::-ms-input-placeholder,
+  section.contact form input::-ms-input-placeholder,
+  section.contact form textarea::-ms-input-placeholder {
+    color: white;
+  }
+  
+  section.contact form label::placeholder,
+  section.contact form input::placeholder,
+  section.contact form textarea::placeholder {
+    color: white;
+  }
+  
+  section.contact form label:required,
+  section.contact form input:required,
+  section.contact form textarea:required {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  section.contact form label:required:invalid,
+  section.contact form input:required:invalid,
+  section.contact form textarea:required:invalid {
+    -webkit-box-shadow: 2px 2px #0eb0c3;
+    box-shadow: 2px 2px #27cbde;
+  }
+  
+  section.contact form textarea {
+    resize: none;
+    height: 150px;
+  }
+  
+  section.contact form label {
+    pointer-events: none;
+    height: 26px;
+    color: #727272;
+    -webkit-transform: translateY(-67px);
+    transform: translateY(-67px);
+    -webkit-transition: color 0.2s ease, font-size 0.2s ease,
+      -webkit-transform 0.2s ease;
+    transition: color 0.2s ease, font-size 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, font-size 0.2s ease,
+      -webkit-transform 0.2s ease;
+  }
+  
+  section.contact form label.message {
+    -webkit-transform: translateY(-156px);
+    transform: translateY(-156px);
+  }
+  
+  section.contact form label .required {
+    color: #f0535d;
+  }
+  
+  section.contact form input:focus,
+  section.contact form textarea:focus {
+    border: 2px solid #48d8a4;
+  }
+  
+  section.contact form input:focus::-webkit-input-placeholder,
+  section.contact form textarea:focus::-webkit-input-placeholder {
+    color: #3f3f3f;
+  }
+  
+  section.contact form input:focus:-ms-input-placeholder,
+  section.contact form textarea:focus:-ms-input-placeholder {
+    color: #3f3f3f;
+  }
+  
+  section.contact form input:focus::-ms-input-placeholder,
+  section.contact form textarea:focus::-ms-input-placeholder {
+    color: #3f3f3f;
+  }
+  
+  section.contact form input:focus::placeholder,
+  section.contact form textarea:focus::placeholder {
+    color: #3f3f3f;
+  }
+  
+  section.contact form input:focus ~ label,
+  section.contact form input:valid ~ label,
+  section.contact form textarea:focus ~ label,
+  section.contact form textarea:valid ~ label {
+    font-size: 0.7rem;
+    color: #48d8a4;
+  }
+  
+  section.contact form input:focus ~ label,
+  section.contact form input:valid ~ label {
+    -webkit-transform: translateY(-80px);
+    transform: translateY(-80px);
+  }
+  
+  section.contact form textarea:focus ~ label,
+  section.contact form textarea:valid ~ label {
+    -webkit-transform: translateY(-168px);
+    transform: translateY(-168px);
+  }
+  
+  .container-social-i {
+    max-width: 500px;
+  }
+  
+  .container-social-i ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .container-social-i ul a {
+    color: #394ff4;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .container-social-i ul a:hover {
+    color: #f0535d;
+    background-color: transparent;
+  }
+  
+  .container-social-i ul li {
+    width: 50px;
+    height: 50px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    list-style: none;
+  }
+  
+  .container-social-i ul li:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+  
+  .container-social-i ul svg {
+    width: 20px;
+    height: 20px;
+    fill: #394ff4;
+  }
+  
+  .container-social-i ul svg:hover {
+    fill: #f0535d;
+  }
+  
+  
+  .btn span {
+    top: 25px;
+    position: relative;
+    right: 0;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+  }
+  .btn:hover {
+    color: gold;
+    background-color:violet ;
+    border-color: white ;
+  }
+
+  .container-flip {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+  }
+    
+  .container-flip span {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-animation: rotate-word 20s linear infinite;
+    animation: rotate-word 20s linear infinite;
+  }
+    
+  .container-flip span:nth-child(2) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+    
+  .container-flip span:nth-child(3) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+    
+  .container-flip span:nth-child(4) {
+    -webkit-animation-delay: 7.5s;
+    animation-delay: 7.5s;
+  }
+    
+  .container-flip span:nth-child(5) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+  }
+    
+  .container-flip span:nth-child(6) {
+    -webkit-animation-delay: 12.5s;
+    animation-delay: 12.5s;
+  }
+    
+  .container-flip span:nth-child(7) {
+    -webkit-animation-delay: 15s;
+    animation-delay: 15s;
+  }
+    
+  .container-flip span:nth-child(8) {
+    -webkit-animation-delay: 17.5s;
+    animation-delay: 17.5s;
+  }
+  @-webkit-keyframes rotate-word {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    4% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+    
+  @keyframes rotate-word {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+    4% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+    
+  .flip {
+    width: 100%;
+  }
+    
+  .flip::after {
+    content: "";
+    display: inline-block;
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+    
+  .typewriter h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(10, end), blink-caret 0.15s step-end infinite;
+    font-family: monospace;
+    font-size: 20px;
+      
+  }
+    
