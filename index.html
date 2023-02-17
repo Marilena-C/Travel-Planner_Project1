@@ -15,44 +15,35 @@
 
 <body>
     <header>
-        <!-- Nav bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#contact">Contact us</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                </div>
-              </nav> -->
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <!-- added toggle and data to the About so that it will work with the modal -->
-                    <a id="about-link" class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#aboutModal">About <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Contact us</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                  </div>
-                </div>
-              </nav>
+
+      <!-- <nav class="navbar navbar-light menu header navbar navbar-expand-sm navbar-dark fixed text-dark"> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse container-fluid" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <!-- added toggle and data to the About so that it will work with the modal -->
+            <a id="about-link" class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#aboutModal">About <span class="sr-only">(current)</span></a>
+            <!-- removed pricing tab since i couldnt see a use of it -->
+            <a id="news" class="nav-item nav-link active"  href="#" data-toggle="modal" data-target="#newsModal">News</a>
+            <!-- switched the location of the news and contact us tabs. Makes more sense this way.  -->
+            <a class="nav-item nav-link" href="#">Contact us</a>
+          </div>
+        </div>
+      </nav>
+  
   
             <!-- Jumbotron -->
-            <div class="container-fluid text-center text-white bg-info p-2 weather-header">
-                <h1>Eco-Trip: </h1>
-                <h4>Make a difference with every mile!</h4>
-              </div>
+            <div class="jumbotron container-fluid text-center text-white bg-info p-2 weather-header">
+              <img src="assets/images/final-eco.png" id="eco-logo" class="ml-auto">
+                <h1>Eco-Trip: </h1> 
+                <!-- changed make to making, simple rewording but i feel it sounds better. -->
+                <h4>Making a difference with every mile!</h4>
+            </div> 
         </header>
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
+<main>
 <!-- Modal dialog -->
 <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -64,20 +55,54 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- Added context to the modal, it will need reviewing before final submission -->
-        <img src="assets/images/Enhanced-logo.png" alt="Eco-Trip company Logo" id="eco"><!-- added Eco-Trip image here --> 
+        <img src="assets/images/Enhanced-logo.png" alt="Eco-Trip company Logo" id="eco">
         <p>Eco-Trip is your journey to a cleaner, greener future.  With our cutting-edge tools and unwavering commitment to carbon neutrality, we empower you to make a positive impact on the world. 
           Uncover the true cost of carbon, track and plan your emissions, and discover the greenest forms of transport to make more sustainable choices. 
           Together, we can create a better future, one mile at a time. 
           Remember, there's no PLANet B, so join us in the global push towards a brighter tomorrow.</p>
-          <!--Add plantet B image here--><img src="assets/images/no planet B.jpg" alt="Protest sign stating that there's no planet B" id="planet">
+          <img src="assets/images/no planet B.jpg" alt="Protest sign stating that there's no planet B" id="planet">
       </div>
     </div>
   </div>
 </div>
-        
- <!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<!-- added news modal along with content and css styling  -->
+        <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header"> 
+                <h5 class="modal-title" id="newsModalLabel">News</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="background-color: #ffffff;">
+                <img src="assets/images/team work.jpg" alt="numerous fist bumps" id="news"> 
+                <p>We're introducing new features!  
+                  <br>
+                  <ul>
+                    <li>
+                      Book Flights and Travel: Book through our app, reduce your carbon footprint, and get the best deals with our travel company partnerships.
+                    </li>
+                    <li>
+                      Stay Up-to-Date with Climate News: Get real-time updates on climate and clean initiatives for informed decision making.
+                    </li>
+                    <li>
+                      Reduce Your Carbon Footprint: Find eco-friendly modes of travel and sustainable accommodations to make a positive impact.
+                    </li>
+                    <li>
+                      Personalized Travel Recommendations: Get custom travel recommendations based on your needs, journey type, and duration for eco-conscious choices.
+                    </li>
+                    <li>
+                      Incentives and Rewards: Save money with vouchers and discounts on travel while helping to build a better, more efficient travel industry through collaborations with governments and companies.
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+   
         <!-- Aside Forms -->
         <div class="container-fluid" id="mainCont" style="max-width: 1400px">
             <div class="row">
@@ -231,6 +256,75 @@
                 <div class="list-group" id="history"></div>
             </aside>
         </div>
+ <!-- Contact us section-->
+ <section class="contact-section" id="contact">
+  <div class="container-fluid">
+    >
+    <h3 class="sectionText">CONTACT US</h3>
+    <div class="row">
+
+      <div class="col-md-2 mb-3 mb-md-0">
+        <div class="card py-1 h-40">
+          <div class="card-body text-center">
+            <a href="https://www.google.co.uk/maps/place/Bullring+%26+Grand+Central/@52.4738992,-1.9045621,14.96z/data=!3m1!5s0x4870bc88ee0ffd5b:0x7edf0a3a313a015b!4m15!1m8!3m7!1s0x4870942d1b417173:0xca81fef0aeee7998!2sBirmingham!3b1!8m2!3d52.486243!4d-1.890401!16zL20vMGszM3A!3m5!1s0x4870bc88b0a23981:0x2f48a9bcc2e96950!8m2!3d52.4776446!4d-1.8944147!16zL20vMDE4eWR6"><img src="assets/images/footer-location.png" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-3 mb-md-0">
+        <div class="card py-1 h-60">
+          <div class="card-body text-center">
+              <!-- the href is good, you just needed to move the img element to be inibetween the <a></a> as shown below  -->
+              <a href="mailto:marilena-C@github.com" target="_blank"><img src="assets/images/email logo.jpg" /></a>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mb-3 mb-md-0">
+          <div class="card py-1 h-60">
+              <div class="card-body text-center">
+                  <!-- removed text as image is now interactive -->
+                    <!-- again all code was correct just a case of moving the img so that it sat inside the <a> tags -->
+                      <a href="https://linkedin.com" target="_blank"><img src="assets/images/linkedIn 3.jpg" /></a>
+                  <!-- </div> -->
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-1 h-60">
+              <div class="card-body text-center">
+                  <!-- i deleted the text acompanying this as the image is interactive -->
+                      <a href="https://github.com/Marilena-C/Travel-Planner_Project1" target="_blank"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5naXRodWI8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iZ2l0aHViIiBmaWxsPSIjNzc3Nzc3Ij4KICAgICAgICAgICAgPHBhdGggZD0iTTEyLDAuMjk3IEM1LjM3LDAuMjk3IDAsNS42NyAwLDEyLjI5NyBDMCwxNy42IDMuNDM4LDIyLjA5NyA4LjIwNSwyMy42ODIgQzguODA1LDIzLjc5NSA5LjAyNSwyMy40MjQgOS4wMjUsMjMuMTA1IEM5LjAyNSwyMi44MiA5LjAxNSwyMi4wNjUgOS4wMSwyMS4wNjUgQzUuNjcyLDIxLjc4OSA0Ljk2OCwxOS40NTUgNC45NjgsMTkuNDU1IEM0LjQyMiwxOC4wNyAzLjYzMywxNy43IDMuNjMzLDE3LjcgQzIuNTQ2LDE2Ljk1NiAzLjcxNywxNi45NzEgMy43MTcsMTYuOTcxIEM0LjkyMiwxNy4wNTUgNS41NTUsMTguMjA3IDUuNTU1LDE4LjIwNyBDNi42MjUsMjAuMDQyIDguMzY0LDE5LjUxMiA5LjA1LDE5LjIwNSBDOS4xNTgsMTguNDI5IDkuNDY3LDE3LjkgOS44MSwxNy42IEM3LjE0NSwxNy4zIDQuMzQ0LDE2LjI2OCA0LjM0NCwxMS42NyBDNC4zNDQsMTAuMzYgNC44MDksOS4yOSA1LjU3OSw4LjQ1IEM1LjQ0NCw4LjE0NyA1LjAzOSw2LjkyNyA1LjY4NCw1LjI3NCBDNS42ODQsNS4yNzQgNi42ODksNC45NTIgOC45ODQsNi41MDQgQzkuOTQ0LDYuMjM3IDEwLjk2NCw2LjEwNSAxMS45ODQsNi4wOTkgQzEzLjAwNCw2LjEwNSAxNC4wMjQsNi4yMzcgMTQuOTg0LDYuNTA0IEMxNy4yNjQsNC45NTIgMTguMjY5LDUuMjc0IDE4LjI2OSw1LjI3NCBDMTguOTE0LDYuOTI3IDE4LjUwOSw4LjE0NyAxOC4zODksOC40NSBDMTkuMTU0LDkuMjkgMTkuNjE5LDEwLjM2IDE5LjYxOSwxMS42NyBDMTkuNjE5LDE2LjI4IDE2LjgxNCwxNy4yOTUgMTQuMTQ0LDE3LjU5IEMxNC41NjQsMTcuOTUgMTQuOTU0LDE4LjY4NiAxNC45NTQsMTkuODEgQzE0Ljk1NCwyMS40MTYgMTQuOTM5LDIyLjcwNiAxNC45MzksMjMuMDk2IEMxNC45MzksMjMuNDExIDE1LjE0OSwyMy43ODYgMTUuNzY0LDIzLjY2NiBDMjAuNTY1LDIyLjA5MiAyNCwxNy41OTIgMjQsMTIuMjk3IEMyNCw1LjY3IDE4LjYyNywwLjI5NyAxMiwwLjI5NyIgaWQ9IlBhdGgiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" /></a>
+                  <!-- </div> -->
+              </div>
+          </div>
+      </div>
+
+          <!-- altered code so that the phone image is in keeping with the style of the other contact forms, 
+          added css to allow the image to reveal the contact number when hovered on -->
+      <div class="col-md-2 mb-3 mb-md-0">
+        <div class="card py-1 h-60">
+          <div class="card-body text-center">
+            <div class="phone-container">
+              <img src="assets/images/footer-mob.png"> <!--change this image-->
+              <h6 class="text-uppercase m-0 phone-number" font-weight="100">+44 7793.555.555</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<!--Footer-->
+  <footer>
+      <div class="container-fluid">
+            <p>&copy; Bootcamp Group 5 2023. All Rights Reserved.</p>
+      </div>
+  </footer>
 <!-- Moment.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         <!-- jQuery -->
@@ -241,6 +335,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="./assets/js/script.js"></script>
-     
+
     </body>
 </html>

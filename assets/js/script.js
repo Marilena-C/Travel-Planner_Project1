@@ -21,14 +21,6 @@ $('#form').on('submit', function(event) {
         title:titleInput,
         transport_types:transportInput
     }
-    ///////////////////// My additional the JS provides a click func to the About //////////////////
-    $(function() {
-        $('#about-link').click(function() {
-          $('#aboutModal').modal('show');
-        });
-      });
-      
-    ///////////////////////////////////////// END //////////////////////////////////////////////////
 
     const options = {
         method: 'POST',
@@ -151,14 +143,6 @@ $('#form-2').on('submit', function(event) {
         })
         .catch(err => console.error(err));
 })
-
-// create a template literl to print details of advanced search 
-
-// `<p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
-// <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
-//                     ---------------------------
-// <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
-// <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>`
 
 
  
