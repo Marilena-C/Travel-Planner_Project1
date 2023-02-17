@@ -59,7 +59,7 @@ input[type=text], select {
     font-weight: bold;
     font-size: 18px;
   }
-  
+
   #SmallcollapseText{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f2f2;
@@ -470,3 +470,22 @@ input[type=text], select {
       
   }
     
+  #planet {
+    max-width: 300px;
+    height:auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #151414;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  #eco {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #9e9c9c;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }

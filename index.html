@@ -15,11 +15,10 @@
 
     <body>
         <header class="col-md-12">
-        
             <nav class="navbar navbar-inverse btn-outline-success position-fixed">
               <div class="container-fluid d-flex justify-content-evenly">
                   <a id="len1" class="hoverable" href="#">Home</a>
-                  <a id="len2" class="hoverable" href="#">About</a>
+                  <a id="about-link" class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
                  <a id="len4" class="hoverable" href="./contact-us-page.html">Contact</a>
               </div>
             </nav>
@@ -30,6 +29,65 @@
               <img style="height: 7rem; padding-bottom: 0%;" class ="logo mt-lg-5"src="./assets/images/images.jfif" alt= "eco-Trip logo">
               </div>
         </header>
+
+        <!-- Modal dialog -->
+        <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="aboutModalLabel">About</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="assets/images/final-eco.png" alt="Eco-Trip company Logo" id="eco">
+                <p>Eco-Trip is your journey to a cleaner, greener future.  With our cutting-edge tools and unwavering commitment to carbon neutrality, we empower you to make a positive impact on the world. 
+                  Uncover the true cost of carbon, track and plan your emissions, and discover the greenest forms of transport to make more sustainable choices. 
+                  Together, we can create a better future, one mile at a time. 
+                  Remember, there's no PLANet B, so join us in the global push towards a brighter tomorrow.</p>
+                  <img src="assets/images/no planet B.jpg" alt="Protest sign stating that there's no planet B" id="planet">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- added news modal along with content and css styling  -->
+                <!-- <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header"> 
+                        <h5 class="modal-title" id="newsModalLabel">News</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body" style="background-color: #ffffff;">
+                        <img src="assets/images/team work.jpg" alt="numerous fist bumps" id="news"> 
+                        <p>We're introducing new features!  
+                          <br>
+                          <ul>
+                            <li>
+                              Book Flights and Travel: Book through our app, reduce your carbon footprint, and get the best deals with our travel company partnerships.
+                            </li>
+                            <li>
+                              Stay Up-to-Date with Climate News: Get real-time updates on climate and clean initiatives for informed decision making.
+                            </li>
+                            <li>
+                              Reduce Your Carbon Footprint: Find eco-friendly modes of travel and sustainable accommodations to make a positive impact.
+                            </li>
+                            <li>
+                              Personalized Travel Recommendations: Get custom travel recommendations based on your needs, journey type, and duration for eco-conscious choices.
+                            </li>
+                            <li>
+                              Incentives and Rewards: Save money with vouchers and discounts on travel while helping to build a better, more efficient travel industry through collaborations with governments and companies.
+                            </li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
         <!-- Aside Forms -->
       <!-- Aside Forms -->
       <div class="container-fluid" id="mainCont" style="max-width: 1400px">

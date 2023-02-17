@@ -211,7 +211,7 @@ $('#form-2').on('submit', function(event) {
             Authorization: 'Bearer {YOUR_API_KEY}',
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            'X-RapidAPI-Key': '0c2cfb20b1mshb958ecebd8b7dcep136256jsn2319ea00bacc',
+            'X-RapidAPI-Key': '6de818783cmsh58e607b66aa2a55p186051jsn8a1383893f77',
             'X-RapidAPI-Host': 'travel-co2-climate-carbon-emissions.p.rapidapi.com'
         },
         body: JSON.stringify(data1)

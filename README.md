@@ -1,4 +1,8 @@
-# Module 9 Project 1: Interactive Front-End Application
+# Eco-trip: Making 
+
+## Description 
+
+
 Requirements:
 *Use Bootstrap.
 *Be deployed to GitHub Pages.
