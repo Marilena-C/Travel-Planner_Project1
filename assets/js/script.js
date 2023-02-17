@@ -68,6 +68,9 @@ $('#form').on('submit', function(event) {
             console.log("CO2 Emission (Flight) = "+response.trips[0].co2e)
             console.log("CO2 Emission (Flight) = "+response.trips[0].steps[0].transport.type)
             // console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
+            // remove dashboard animation
+            $('#dashboard-anim').hide()
+
             $('#emissionData').html(
                 `<p class="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
                 <p class ="mainTextToformat" data-value="${response.trips[0].co2e}"> => ${response.trips[0].co2e} kg</p>`
@@ -224,6 +227,9 @@ $('#form-2').on('submit', function(event) {
         .then(response => response.json())
         .then(response => {
             console.log(response)
+            // remove dashboard animation
+            $('#dashboard-anim').hide()
+
             arrayOfSteps = response.trips[0].steps
             var sumOfTransport = 0
             var sumOfAccomodation = 0
@@ -327,7 +333,7 @@ $('#form-2').on('submit', function(event) {
 $('#history').on('click', '.btn-render-form-2', function(){
     // clear dashboard screen
     // $('#today').empty()
-    // $('.forecast-box').text('')
+    // $('.forecast-box').html('')
 
     console.log("I'm working")
     
