@@ -13,13 +13,14 @@
          <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
 
+
     <body>
         <header class="col-md-12">
         
             <nav class="navbar navbar-inverse btn-outline-success position-fixed">
               <div class="container-fluid d-flex justify-content-evenly">
                   <a id="len1" class="hoverable" href="#">Home</a>
-                  <a id="len2" class="hoverable" href="#">About</a>
+                  <a id="about-link" class="nav-item nav-link active hoverable" href="#" data-toggle="modal" data-target="#aboutModal"  class="hoverable">About</a>
                  <a id="len4" class="hoverable" href="./contact-us-page.html">Contact</a>
               </div>
             </nav>
@@ -28,8 +29,35 @@
             <!-- Jumbotron -->
             <div class="container-fluid text-center text-white  p-2 weather-header">
               <img style="height: 7rem; padding-bottom: 0%;" class ="logo mt-lg-5"src="./assets/images/images.jfif" alt= "eco-Trip logo">
+
               </div>
         </header>
+        
+<!-- Modal dialog -->
+<div class="modal fade" id="aboutModal" role="dialog" tabindex="-1"> <!-- tabindex="-1" makes the modal transistion quicker onto the page, without it the time to display is noticably longer -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">About</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Added context to the modal, it will need reviewing before final submission -->
+        <img src="assets/images/Enhanced-logo.png" alt="Eco-Trip company Logo" id="eco"><!-- added Eco-Trip image here --> 
+        <p>Eco-Trip is your journey to a cleaner, greener future.  With our cutting-edge tools and unwavering commitment to carbon neutrality, we empower you to make a positive impact on the world. 
+          Uncover the true cost of carbon, track and plan your emissions, and discover the greenest forms of transport to make more sustainable choices. 
+          Together, we can create a better future, one mile at a time. 
+          Remember, there's no PLANet B, so join us in the global push towards a brighter tomorrow.</p>
+          <!--Add plantet B image here--><img src="assets/images/no planet B.jpg" alt="Protest sign stating that there's no planet B" id="planet">
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+
         <!-- Aside Forms -->
       <!-- Aside Forms -->
       <div class="container-fluid" id="mainCont" style="max-width: 1400px">
@@ -192,7 +220,6 @@
                   <input id="form-2-submit"type="submit" value="Submit">
                 </form>
               </div>
-              
           </aside>
             
         </div>
@@ -207,5 +234,6 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
+
     </body>
 </html>

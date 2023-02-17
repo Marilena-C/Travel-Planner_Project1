@@ -43,6 +43,17 @@ input[type=text], select {
     background-color: #323741;
     color: white;
     min-height: 5rem;
+
+  }
+
+  #eco, #planet {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+
     border-radius: 10px;
     
   }
@@ -470,3 +481,4 @@ input[type=text], select {
       
   }
     
+

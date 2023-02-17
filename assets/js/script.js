@@ -43,7 +43,14 @@ $('#form').on('submit', function(event) {
         title:titleInput,
         transport_types:transportInput
     }
-    
+    ///////////////////// My additional the JS provides a click func to the About //////////////////
+    $(function() {
+        $('#about-link').click(function() {
+          $('#aboutModal').modal('show');
+        });
+      });
+      
+    ///////////////////////////////////////// END //////////////////////////////////////////////////
 
     const options = {
         method: 'POST',
