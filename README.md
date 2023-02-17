@@ -1,75 +1,38 @@
 <<<<<<< HEAD
-# Eco-trip: Making 
+# Eco-trip: Making every mile counts
 
 ## Description 
+Eco-trip is a web based app that allows users estimate and keep track of the amount of Carbon emitted for trips between any two cities of the world, including the current and 3 days forecast weather condition for the destination city, built with HTML, CSS, Jquery, moment.js and two server APIs. 
 
-=======
-# Module 9 Project 1: Interactive Front-End Application
-In this project, we've coaborated and built an app that provides users with an estimated amount of CO2 emissions for trips between any two cities of the world. 
-It also provides current/forecast weather conditions for the destination city.
-This will make people aware of the impact they can have on environment, and this way they can make a better choice after comparing the calculated CO2 emissions.
->>>>>>> 38d3475c1ee2262d4ad6fdb842a011c2e0930bf8
+The two server APIs implemented are Travel CO2 and Open weather API. 
 
-Requirements:
-*Use Bootstrap.
-*Be deployed to GitHub Pages.
-*Be interactive (i.e., accept and respond to user input).
-*Use at least two server-side APIs.
-*Does not use alerts, confirms, or prompts (use modals).
-*Use client-side storage to store persistent data.
-*Be responsive.
-*Have a polished UI.
+The practical benefits of this app is that it keeps people in a state of awareness of their environmental impact, so that they can make responsible choices in planning for trips. 
 
-*Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+## App screen shot
+![home page of the App](./assets/images/home-page.png)
 
-*Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-## "Travel planner - planning a trip taking into account the impact on environment" 
-Project description: 
+## App Features
+Follow the [App url](https://marilena-c.github.io/Travel-Planner_Project1). You will land on the home page displayed above. The App has two search field, namely the Simple and Advanced search. The simple search returns carbon emission between any two cities based on user's transport options. Meanwhile, the advanced provides both transport and accommodation options for trips searched. 
+When a user clicks on a trip in the search history they are again presented with the eresults for that trip. Thus, helping them compare searches. 
 
-This app leverages two distinct API’s to enable users to access and evaluate the carbon footprint as a result of their 
-travel. Through the platform, users can search for a destination and preferred mode of travel, allowing them to see 
-how much C02 has been produced. 
-Additionally, users can also access information regarding the weather conditions 
-at their destination. The site offers comparative data relating to the C02 emitted by separate modes of travel, along 
-with real-time weather forecasts and analytical tools to keep users informed and up to date.
-     This project makes use of two API’s, allowing the user to view the carbon cost of their travel. Users are able to 
-search for their detination and mode of travel to find out exactly how much C02 that journey would produce. Users 
-will also be given information on the weather at their detination  be able to see the true effect they have on the 
-environment. The site offer C02 comparisons between types of travel, the ability to view weather forecasts at their 
-deestination of choice, providing the user with up to date information and analytics.
-
-In terms of user interface, there are 2 user input and 2 search buttons, where users can input starting location and destination, transportation type and accomodation options.
-The user could enter the start and end citis they want to travel to and the app wreturns estimate CO2 emissions for their trip by calculating the amount of CO2 emissions, as well as the weather forecast.
-
-When a user searches for a trip from one city to another, they are presented with current and future weather conditions for the destination city and the search results are added to the search history;
-When a user views the current available information for that city they are presented with:
-*The city name
-*The current date
-*The weather conditions
-*The estimated CO2 emissions for the trip  to the searched place
-*The time it takes to get there at a certain time (depending on traffic conditions, weather or any events happenig)
-*The things that would be recommended to see in or around that location
-
-*When a user clicks on a trip in the search history they are again presented with th eresults for that trip.
-
-## Activities covered
-Discussed and decided on what the app should do
-Created a share document where we can add ideas and sugestions;
-
-Created the folder structure 
-Link the css and js script with the index.html file;
-Add the required link tags in html file;
-Created issues and branchef for different elements that would be then merged into main branch;
-Researched a lot of server APIs, until we decided what we want our app to do.
-We have chosen Travel CO2 and Open weather server APIs.
-In terms of technology, we've been using the server APIs mentioned above, web API Momentum, Bootstrap framework, and of course HTML, CSS and javascript.
+The picture below shows the app in active search use:
+![](./assets/images/App%20screenshot.png)
 
 
- ## Screenshots
-Github page:![Github_page_Project1](https://user-images.githubusercontent.com/118940228/219758434-11532e68-001e-4712-8ed7-2c7758cce449.png)
+## Reflection
+This was a group project built during our 9th week at the UoB bootcamp in FE web development. 
 
-Deployed page: ![DeployedPage_Travel](https://user-images.githubusercontent.com/118940228/219761603-c1339c3c-7129-4eb4-ad80-6f4f5770cc2a.png)
+The main project goal was to build an interactive, polished and responsive web app that uses at least two server APIs. 
 
+The main challenge on this project was organising our code development via github. As it was our first collaborative project, we initially struggled engaging github collaboration features and did run into problems with our repo. However, with intervention from instructors and personal and collaborative research, we overcame that initial struggle. Also, we did spend a lot of time on deciding what specific API to implement, which stole from our development time. Meanwhile, with great team spirit, we did the redeem time. 
+
+in future project, we will strive to make such technical decisions (like API type or library) early on, so that we can craft and solidify our project ideas before actual development. 
+
+## Upcoming features 
+To extend the functionality of this app, we plan to implement;
+1. A feature that allows user book flights and view airports within certain radius mile of their destination city
+2. A news blog post that provides news articles and other informational materials on sustainability and climate change.
+3. Recommendation feature that suggest best methods of travel based on user need, journey type, duration etc. 
 
 
  ## Links

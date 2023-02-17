@@ -52,8 +52,7 @@ $('#form').on('submit', function(event) {
             'X-RapidAPI-Key': 'f72fd1513cmshccbbe39f6137af5p1ba8a9jsn6de3b4413c0d',
             'X-RapidAPI-Host': 'travel-co2-climate-carbon-emissions.p.rapidapi.com'
         },
-        // body: '{"from":"Berlin, Germany","to":"Stockholm, Sweden","ways":2,"people":2,"language":"en","title":"Comparing flying and public transport from Berlin to Stockholm.","transport_types":["flying","public-transport","driving"]}' 
-        body: JSON.stringify(data) 
+       
     };
 
     fetch('https://travel-co2-climate-carbon-emissions.p.rapidapi.com/api/v1/simpletrips', options)
@@ -146,9 +145,6 @@ $('#form').on('submit', function(event) {
 
 
 })
-
-{/* <p>CO2 Emission (Public Transport) = ${response.trips[1].co2e} kg</p>
-<p>CO2 Emission (driving) = ${response.trips[2].co2e} kg</p> */}
 
 
 // Intra city emission estimation
