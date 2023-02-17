@@ -61,9 +61,9 @@ In terms of technology, we've been using the server APIs mentioned above, web AP
  ## Screenshots
 Github page:![Github_page_Project1](https://user-images.githubusercontent.com/118940228/219758434-11532e68-001e-4712-8ed7-2c7758cce449.png)
 
-Deployed page: 
-![Alt text](assets/images/DeployedPage_Travel.png)
-(assets/images/secondCommitGitHub.jpg)
+Deployed page: ![DeployedPage_Travel](https://user-images.githubusercontent.com/118940228/219761603-c1339c3c-7129-4eb4-ad80-6f4f5770cc2a.png)
+
+
 
  ## Links
 GitHub repository: https://github.com/Marilena-C/Travel-Planner_Project1
