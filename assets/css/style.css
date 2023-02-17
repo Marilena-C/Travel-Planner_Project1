@@ -59,8 +59,16 @@ input[type=text], select {
     font-weight: bold;
     font-size: 18px;
   }
+  
+  #SmallcollapseText{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
 
 
+
+  /* Styles for other Page - Contact etc. */
   a {
     font-family: 'Poppins',sans-serif;
     text-decoration: none !important;
@@ -110,10 +118,7 @@ input[type=text], select {
     font-size: medium;
   }
 
-  body {
-   
-    background-image: url(../images/pexels-pixabay-66869.jpg);
-  }
+  
 
   section.contact form {
     margin-top: 50px;

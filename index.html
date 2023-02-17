@@ -6,426 +6,207 @@
         <title>Travel planner App</title>
         
          <!-- Bootstrap CSS CDN  -->
-         <link 
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-          crossorigin="anonymous" />
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-          crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
+          
         <!-- Custom CSS -->
-         <link rel="stylesheet" href="./assets/css/style.css" />
-         <!-- // Icons  -->
+         <link rel="stylesheet" href="./assets/css/style.css" />   
        
-       <link
-         rel="stylesheet"
-         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
-       <link
-         rel="stylesheet"
-         href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-         crossorigin="anonymous" />
     </head>
 
     <body>
         <header>
         
-            <nav class="navbar navbar-inverse bg-transparent position-fixed">
-      
+            <nav class="navbar navbar-inverse btn-outline-success position-fixed">
               <div class="container-fluid d-flex justify-content-evenly">
-               
                   <a id="len1" class="hoverable" href="#">Home</a>
                   <a id="len2" class="hoverable" href="#">About</a>
-                 <a id="len4" class="hoverable" href="#">Contact</a>
+                 <a id="len4" class="hoverable" href="./contact-us-page.html">Contact</a>
               </div>
             </nav>
           </div>
               
             <!-- Jumbotron -->
             <div class="container-fluid text-center text-white  p-2 weather-header">
-              <img class ="logo mt-lg-5"src="./assets/images/images.jfif" alt= "eco-Trip logo">
+              <img style="height: 7rem; padding-bottom: 0%;" class ="logo mt-lg-5"src="./assets/images/images.jfif" alt= "eco-Trip logo">
               </div>
         </header>
         <!-- Aside Forms -->
-        <div class="container-fluid" id="mainCont" style="max-width: 1400px">
-            <div class="row">
-              <aside class="col-lg-3 col-md-6 pb-3">
-                <h2 id="form-heading" class="mt-1 h3 form-label text-center">
-                  Simple search:
-                </h2>
-                <div id="" data-toggle="collapse" class= "data-target formCont">
-                    <form id="form">
-                      <label for="location">From</label>
-                      <input type="text" id="from" name="location" placeholder="London, UK..">
-  
-                      <label for="destination">To</label>
-                      <input type="text" id="to" name="destination" placeholder="New York,US..">
-  
-                      <label for="ways">Ways</label>
-                      <select id="ways" name="country" value="1">
-                        <option value="1">single</option>
-                        <option value="2">return</option>
-                      </select>
+      <!-- Aside Forms -->
+      <div class="container-fluid" id="mainCont" style="max-width: 1400px">
+        <div class="row">
+          <aside class="col-lg-3 col-md-6 pb-3">
+            <h2 id="form-heading" class="mt-1 h3 form-label">
+              Simple search
+            </h2>
+            <div id="" data-toggle="collapse" class= "data-target formCont">
+                <form id="form">
+                  <label for="location">From</label>
+                  <input class="from" type="text" id="from" name="location" placeholder="London, UK..">
 
-                      <label for="people">People</label>
-                      <input type="text" id="people" name="people" value="1">
+                  <label for="destination">To</label>
+                  <input class="to" type="text" id="to" name="destination" placeholder="New York,US..">
 
-                      <label for="transport">Transport</label>
-                      <select id="transport" name="country" value="flying" placeholder="Flight" form="">
-                        <option value="flying">Flight</option>
-                        <option value="public-transport">Train | Sub-way | Ferry | Bus</option>
-                        <option value="walking">Walking</option>
-                        <option value="bicycling">Bicycle</option>
-                        <option value="driving">Minivan | Car | bus | motor-home</option>
-                      </select>
-    
-                      <input id="submit "type="submit" value="Submit">
-                    </form>
-                  </div>
-                <div class="list-group" id="history"></div>
-              </aside>
-              
-              <div class="col-lg-6 pb-3">
-                <section class="mt-3 hide mainDisplayCont" role="region" aria-live="polite">
-                    <div class="card w-100 mainDataDisplay">
-                        <div id="emissionData" class="card-body">
-                          <!-- <h5 class="card-title">Card title</h5> -->
-                          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-                        </div>
-                      </div>
-                </section>
-                <h4 class = "hide text-center" id="forecastHeading">Search history:</h4>
-                <section id="forecast" class="row mt-3 container-fluid hide" role="region" aria-live="polite">
-                    <div class="col">
-                      <div class="card" id = "forecast-1">
-    
-                      </div>
-                    </div>
-    
-                    <div class="col">
-                      <div class="card" id = "forecast-2">
-                      </div>
-                    </div>
-    
-                    <div class="col">
-                      <div class="card" id = "forecast-3">    
-                      </div>
-                    </div>
-    
-                    <div class="col">
-                      <div class="card" id = "forecast-4">  
-                      </div>
-                    </div>
-    
-                    <div class="col">
-                      <div class="card" id = "forecast-5">   
-                      </div>
-                    </div>
-                </section>
+                  <label for="ways">Ways</label>
+                  <select id="ways" name="country" value="1">
+                    <option value="1">single</option>
+                    <option value="2">return</option>
+                  </select>
+
+                  <label for="people">People</label>
+                  <input type="text" id="people" name="people" value="1">
+
+                  <label for="transport">Transport</label>
+                  <select class="transportType" id="transport" name="country" value="flying" placeholder="Flight" form="">
+                    <option value="flying">Flight</option>
+                    <option value="public-transport">Train | Sub-way | Ferry | Bus</option>
+                    <option value="walking">Walking</option>
+                    <option value="bicycling">Bicycle</option>
+                    <option value="driving">Minivan | Car | bus | motor-home</option>
+                  </select>
+  
+                  <input id="submit "type="submit" value="Submit">
+                </form>
               </div>
-              <aside class="col-lg-3 col-md-6 pb-3">
-                <h2 id="form-heading" class="mt-1 h3 form-label text-center">
-                  Advanced search:
-                </h2>
-                <div id="" data-toggle="collapse" class= "data-target formCont">
-                    <form id="form-2">
-                      <label for="startPoint">location</label>
-                      <input type="text" id="placename-1" name="startPoint" placeholder="London, UK..">
-
-                      <label for="endPoint">Destination</label>
-                      <input type="text" id="placename-2" name="endPoint" placeholder="New York,US..">
-
-                      <p><button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#collapseTransport" aria-expanded="false" aria-controls="collapseExample">
-                        Add Transport
-                      </button>
-                      </p>
-   
-                      <div class="collapse" id="collapseTransport">
-                        <div>
-                            <label for="transport">Type</label>
-                              <select id="trans-type" name="transport-type" value="flying" placeholder="Flight" form="">
-                                <option value="flying">Flight</option>
-                                <option value="public-transport">Train | Sub-way | Ferry | Bus</option>
-                                <option value="walking">Walking</option>
-                                <option value="bicycling">Bicycle</option>
-                                <option value="driving">Minivan | Car | bus | motor-home</option>
-                              </select>
-
-                              <label for="ways">Ways</label>
-                              <select id="trans-ways" name="num-of-ways" value="1">
-                                <option value="1">single</option>
-                                <option value="2">return</option>
-                              </select>
-
-                              <label for="trans-people">People</label>
-                              <input type="text" id="trans-people" name="people" value="1">
-                        </div>
-                      </div>                  
-
-
-                      <p><button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#collapseAccom" aria-expanded="false" aria-controls="collapseExample">
-                        Add Accommodation
-                      </button>
-                      </p>
-   
-                      <div class="collapse" id="collapseAccom">
-                        <div>
-                            <label for="accomodation-type">Type</label>
-                              <select id="acco-type" name="accommodation-type" value="hotel" placeholder="Flight" form="">
-                                <option value="hotel">Hotel</option>
-                                <option value="tent">Tent</option>
-                                <option value="apartment">Apartment</option>
-                                <option value="room">Room</option>
-                                <option value="hostel">Hostel</option>
-                              </select>
-
-                              <label for="nights">Nights</label>
-                              <input type="text" id="acco-night" name="num-of-nights" value="1">
-
-                              <label for="acco-people">People</label>
-                              <input type="text" id="acco-people" name="people" value="1">
-                        </div>
-                      <input id="form-2-submit"type="submit" value="Submit">
-                    </form>
-                  </div>
-                <div class="list-group" id="history"></div>
-              </aside>
               
-            </div>
-            <br>
-            <br>
-
-            <section class="about" id= "about" style="height: 850px; padding: 30px;  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));">
-              <div class="row justify-content-center align-items-center p-1 mt-5">
-                <div class="col-4  ">
-                  <h1 class="display-4 p-2 "> <b>About Eco-trip</b></h1>
-                  <div class="container-content p-2">
-                    <div class="container-img-profile">
-                     
-                    </div>
-                    <!--  // Image container profile  -->
-                    <img class="fa-square mx-lg-5" src="./assets/images/images.jfif"  width="220px " />
-                  </div>
-                  <!-- //container-content -->
+          </aside>
             
-                </div>
-                <!-- //One of two columns -->
-          
-                <div class="col-6 ">
-                  <div class="container-text p-4">
-                    <h2 >We write about&nbsp&nbsp;
-                      <span class="container-flip text text-start"> 
-                      <span class="flip flip-developer"> Eco trips</span>
-                      <span class="flip flip-digital">The greenhouse effect.</span>
-                      <span class="flip flip-storyteller">Carbon footprint.</span>
-                      <span class="flip flip-rockstar">Green finance</span>
-                      <span class="flip flip-tech-">Sustainable event planning</span>
-                      <span class="flip flip-multitasking">Eco-consulting</span>
-                      <span class="flip flip-multitasking">Sustainability</span>
-                      </span>
-                    </h2> <br>
-                   
-                    <p>
-                     -  <b>Environmental Conservation:</b> Eco travel encourages travelers to visit natural areas that are managed sustainably, which helps in protecting the environment, preserving wildlife, and minimizing pollution.
-                    </p>
-                    <p>
-                     -  <b>Community Development: </b> Eco travel involves working closely with local communities, supporting their economic development, and promoting cultural understanding and respect, which leads to a more sustainable and equitable future.
-                    </p>
-                    <p>
-                     - <b>Education:</b> Eco travel often includes educational components, such as guided tours, lectures, and workshops, which help raise awareness about the importance of protecting the environment and its biodiversity.
-                    
-                     <p>
-                     -  <b>Health and Well-being:</b> Eco travel often involves outdoor activities, such as hiking, birdwatching, and nature walks, which provide opportunities for physical activity and stress relief.
-                    </p>
-                   
-         
-                    <div class="container text-center">
-                      <a href="#contact" class="btn btn-outline-primary"> Get in touch </a>
+          <div class="col-lg-6 pb-3">
+            <section class="mt-3 hide mainDisplayCont" role="region" aria-live="polite">
+                <div class="card w-100 h-75 mainDataDisplay">
+                    <div id="emissionData" class="card-body">
+                      <h3 style="font-family: Arial, Helvetica, sans-serif;">We write about&nbsp&nbsp;
+                        <span class="container-flip text text-start"> 
+                        <span class="flip flip-developer"> Eco trips</span>
+                        <span class="flip flip-digital">The greenhouse effect.</span>
+                        <span class="flip flip-storyteller">Carbon footprint.</span>
+                        <span class="flip flip-rockstar">Green finance</span>
+                        <span class="flip flip-tech-">Sustainable event planning</span>
+                        <span class="flip flip-multitasking">Eco-consulting</span>
+                        <span class="flip flip-multitasking">Sustainability</span>
+                        </span>
+                      </h3>
                     </div>
-                    <!-- // container text-link -->
                   </div>
-                  <!-- //container-text -->
-                </div>
-                <!-- //two of two columns -->
-              </div>
-              <!--row justify-content-end -->
-    
             </section>
-            <br>
-            <br>
-            <br>
-            <!--section end-->
-         <!-- Get in touch section -->
-         <section class="contact" id="contact" style="height: 750px;width: 100%; background: linear-gradient(to top, #0fd850 0%, #f9f047 100%);">
-          <div class="row justify-content-center">
-            <div class="col-4 mt-5">
-                <h1 class="text-center">Contact</h1>
-                <h3 class="text-center" >Get in touch</h3>
-                <div class="container-content">
-                  <div class="container-form">
-                    <p>
-                      Dropping a line to say g’day, ask for our resume or see if we
-                      can build something amazing together? We’d love to hear from
-                      you!
-                    </p>
-                    <p>
-                      Fill in your info in the form below and I look forward to
-                      hearing from you!
-                    </p>
-                    <form action="https://formspree.io/f/mqkokkbp" method="POST">
-                      <div class="field">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          required="required"
-                          placeholder="Tim Berners-Lee" />
-                        <label for="name"
-                          >Name <span class="required">*</span>
-                        </label>
-                      </div>
-                      <div class="field">
-                        <input
-                          type="email"
-                          name="_replyto"
-                          id="email"
-                          required="required"
-                          placeholder="i_invented_the@internet.com" />
-                        <label for="email">
-                          Email <span class="required">*</span>
-                        </label>
-                      </div>
-                      <div class="field">
-                        <textarea
-                          type="textbox"
-                          name="message"
-                          id="message"
-                          required="required"
-                          placeholder="Dear Team, I'm a big fan of squirrels as well."></textarea>
-                        <label for="message"
-                          >Message <span class="required">*</span>
-                        </label>
-                      </div>
-                      <div class="container-work-btns  d-flex justify-content-evenly">
-                        <button type="button" href="./#contact" class="btn btn-outline-primary">Get in touch </button>
-                       </div>
-                    </form>
+            <!-- Small collapse Icon content -->
+            <div class="collapse" id="collapseIcon">
+            <div id="SmallcollapseText" class="card card-body">
+            </div>
+            </div>
+                
+            <!-- SEARCH HISTORY -->
+            <h4 class = "hide" id="forecastHeading">Search history:</h4>
+            <div id="history"></div>
+            <!-- FORECAST  -->
+            <section id="forecast" class="row mt-3 container-fluid hide" role="region" aria-live="polite">
+                <div class="col">
+                  <div class="card" id = "today">
+  
                   </div>
-                  <!-- container-form -->
                 </div>
-                <!-- container-content -->
+  
+                <div class="col">
+                  <div class="card" id = "forecast-1">
+                  </div>
+                </div>
+  
+                <div class="col">
+                  <div class="card" id = "forecast-2">    
+                  </div>
+                </div>
+  
+                <div class="col">
+                  <div class="card" id = "forecast-3">  
+                  </div>
+                </div>
+  
+                <!-- <div class="col">
+                  <div class="card" id = "forecast-5">   
+                  </div>
+                </div> -->
+            </section>
+             <br>
+          </div>
+          <aside class="col-lg-3 col-md-6 pb-3">
+            <h2 id="form-heading" class="mt-1 h3 form-label">
+              Advanced search:
+            </h2>
+            <div id="" data-toggle="collapse" class= "data-target formCont">
+                <form id="form-2">
+                  <label for="startPoint">location</label>
+                  <input class="from" type="text" id="placename-1" name="startPoint" placeholder="London, UK..">
+
+                  <label for="endPoint">Destination</label>
+                  <input class="to" type="text" id="placename-2" name="endPoint" placeholder="New York,US..">
+
+                  <p><button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#collapseTransport" aria-expanded="false" aria-controls="collapseExample">
+                    Add Transport
+                  </button>
+                  </p>
+ 
+                  <div class="collapse" id="collapseTransport">
+                    <div>
+                        <label for="transport">Type</label>
+                          <select class="transportType" id="trans-type" name="transport-type" value="flying" placeholder="Flight" form="">
+                            <option value="flying">Flight</option>
+                            <option value="public-transport">Train | Sub-way | Ferry | Bus</option>
+                            <option value="walking">Walking</option>
+                            <option value="bicycling">Bicycle</option>
+                            <option value="driving">Minivan | Car | bus | motor-home</option>
+                          </select>
+
+                          <label for="ways">Ways</label>
+                          <select id="trans-ways" name="num-of-ways" value="1">
+                            <option value="1">single</option>
+                            <option value="2">return</option>
+                          </select>
+
+                          <label for="trans-people">People</label>
+                          <input type="text" id="trans-people" name="people" value="1">
+                    </div>
+                  </div>                  
+
+
+                  <p><button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#collapseAccom" aria-expanded="false" aria-controls="collapseExample">
+                    Add Accommodation
+                  </button>
+                  </p>
+ 
+                  <div class="collapse" id="collapseAccom">
+                    <div>
+                        <label for="accomodation-type">Type</label>
+                          <select id="acco-type" name="accommodation-type" value="hotel" placeholder="Flight" form="">
+                            <option value="hotel">Hotel</option>
+                            <option value="tent">Tent</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="room">Room</option>
+                            <option value="hostel">Hostel</option>
+                          </select>
+
+                          <label for="nights">Nights</label>
+                          <input type="text" id="acco-night" name="num-of-nights" value="1">
+
+                          <label for="acco-people">People</label>
+                          <input type="text" id="acco-people" name="people" value="1">
+                    </div>
+                  <input id="form-2-submit"type="submit" value="Submit">
+                </form>
               </div>
-              <!-- Col-4 -->
-              <div class="col-4 mt-5 p-3">
-              <div class="container-social p-3 mt-5">
-                <p class="bold p-3 text-center">
-                  Feeling Social ? Find me on these online spaces too
-                </p>
-                <div class="= container-social-i p-3">
-                  <ul class>
-                    <!-- Twitter -->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-twitter" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                    <!-- Codepen -->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-codepen" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                    <!-- GitHub -->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-github" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                    <!-- Medium-->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-medium-m" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                    <!-- Instagram -->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-instagram" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                    <!-- Shutterstock -->
-                    <li>
-                      <a
-                        href="https://twitter.com/aartimaher"
-                        target="_blank"
-                        aria-label="open the link to aarti's Twitter page">
-                        <i class="fab fa-twitter" aria-hidden="true"> </i>
-                        <span class="visually-hidden">Twitter</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>      
-                <!-- container-social-i-->
-              </div>  
-              <!-- container-social -->
-              </div>    
-              <!-- .//col4 -->
-            </div> 
-            <!-- .//wrapper -->
-          </section>
-          <!-- .//Row Justify Content -->
-        </section>
-        <!-- .//section end -->
-        <footer>
-          <div class="row justify-content-center">
-          <div class="col-6">
-          <div class="wrapper">
-            <p>
-              © 2023 - 2024 | Designed &amp; coded  💙 Group 5 Edx bootcamp 
-            </p>
-          </div>     <!-- .//Wrapper -->
-          </div>    <!-- .//Col-4 -->
-          </div>    <!-- .//Justify content center -->
-        </footer>
-        <!-- Moment.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-        <!-- jQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!-- bootstrap popper -->
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-          integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-          crossorigin="anonymous"></script>
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-          integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-          crossorigin="anonymous"></script>
-        <script src="./assets/js/script.js"></script>
+              
+          </aside>
+            
+        </div>
+            
+      <!-- Moment.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+      <!-- jQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <!-- bootstrap popper -->
+      <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="./assets/js/script.js"></script>
     </body>
 </html>
