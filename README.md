@@ -16,7 +16,7 @@ Requirements:
 *Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
 *Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-## "Travel planner - location and what you can do around that area" 
+## "Travel planner - planning a trip taking into account the impact on environment" 
 Project description: 
 
 This app leverages two distinct API’s to enable users to access and evaluate the carbon footprint as a result of their 
