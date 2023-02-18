@@ -15,10 +15,10 @@ Follow the [App url](https://marilena-c.github.io/Travel-Planner_Project1). You 
 When a user clicks on a trip in the search history they are again presented with the results for that trip. Thus, helping them compare searches. 
 
 The picture below shows the app in active use:
-### Home Page/About
+#### Home Page/About
 ![home-page and About demo](./assets/images/home-page-and-about-section.gif)
 
-## Advanced search
+#### Advanced search
 ![advanced-search](./assets/images/advanced-search.png)
 
 
