@@ -44,15 +44,14 @@ $('#form').on('submit', function(event) {
         transport_types:transportInput
     }
     
-
     const options = {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': 'f72fd1513cmshccbbe39f6137af5p1ba8a9jsn6de3b4413c0d',
+            'X-RapidAPI-Key': '6de818783cmsh58e607b66aa2a55p186051jsn8a1383893f77',
             'X-RapidAPI-Host': 'travel-co2-climate-carbon-emissions.p.rapidapi.com'
         },
-       
+        body: JSON.stringify(data) 
     };
 
     fetch('https://travel-co2-climate-carbon-emissions.p.rapidapi.com/api/v1/simpletrips', options)
@@ -62,7 +61,7 @@ $('#form').on('submit', function(event) {
             console.log("CO2 Emission (Flight) = "+response.trips[0].steps[0].transport.type)
             // console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
             // remove dashboard animation
-            $('#dashboard-anim').hide()
+            $('#dashboard-anim').hide();
 
             $('#emissionData').html(
                 `<p class="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
@@ -76,15 +75,7 @@ $('#form').on('submit', function(event) {
             sendToLocal();
             renderSearchHistoryBar();
             printWeatherForecast(response)
-            // outerContentCont.html(
-            // `<div class="card card-body">
-            //     <p>CO2 Emission (Transport) = ${sumOfTransport} kg</p>
-            //     <p>CO2 Emission (accommodation) = ${sumOfAccomodation} kg</p>
-            //                     ---------------------------
-            //     <p>CO2 Emission (TOTAL) = ${response.trips[0].co2e} kg</p>
-            //     <p>CO2 Emission (TOTAL) = ${sumOfTransport+sumOfAccomodation} kg</p>
-            // </div>`
-            // )
+           
 
 
         
@@ -274,8 +265,7 @@ $('#form-2').on('submit', function(event) {
                     first: $('#forecast-1').html().trim(),
                     second: $('#forecast-2').html().trim(),
                     third: $('#forecast-3').html().trim()
-                    // fouth: fthForecastCont.html().trim(),
-                    // fifth: fifthForecastCont.html().trim()
+                    
                 }
                 // arrayUpdating.push(localStoObjectItem)
                 
@@ -301,11 +291,6 @@ $('#form-2').on('submit', function(event) {
 
 
 
-                // Create new btn element and append
-                // getHistoryObj.forEach(function(objParam) {
-                //     var newBtn = $('<button>').text(`${objParam.locationFrom} => ${objParam.locationTo}:`)
-                //     $('#history').append(newBtn);
-                // })
 
 
 
@@ -313,7 +298,7 @@ $('#form-2').on('submit', function(event) {
             }
         })
         .catch(err => console.error(err));
-    // put your send to local here
+  
     
 })
 
@@ -404,9 +389,6 @@ function printWeatherForecast (travelAPIresponse) {
         console.log(moment().add(3, 'd').format('YYYY-MM-DD'))
 
        
-
-
-
         for (var i = 0; i < arrayOfData.length; i++) {
             if (arrayOfData[i].dt_txt == moment(date).add(0,'d').format('YYYY-MM-DD') + ` ${time}`) {
                 var item = arrayOfData[0]
