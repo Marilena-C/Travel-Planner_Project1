@@ -20,9 +20,12 @@ var firstForecastCont = $('#forecast-1')
 var secForecastCont = $('#forecast-2')
 var trdForecastCont = $('#forecast-3')
 
-// // Form inputs grabs
+//Event listener for simple search form + Travel API call + data rendering + local storage feature
 $('#form').on('submit', function(event) {
-    event.preventDefault()
+    event.preventDefault();
+    $('#dashboard-anim').hide();
+    
+
     var cityFrom = $('#from').val()
     var cityTo = $('#to').val()
     var waysInput = $('#ways').val()
@@ -61,7 +64,8 @@ $('#form').on('submit', function(event) {
             console.log("CO2 Emission (Flight) = "+response.trips[0].steps[0].transport.type)
             // console.log("CO2 Emission (Public Transport) = "+response.trips[1].co2e)
             // remove dashboard animation
-            $('#dashboard-anim').hide();
+            
+            
 
             $('#emissionData').html(
                 `<p class="dataTitle"> CO2 Emission (${response.trips[0].steps[0].transport.type})
@@ -138,10 +142,10 @@ $('#form').on('submit', function(event) {
 })
 
 
-// Intra city emission estimation
-// FORM inputs grab
+//Event listener for Advanced search form + Travel API call + data rendering + local storage feature
 $('#form-2').on('submit', function(event) {
     event.preventDefault()
+
     var startLocation = $('#placename-1').val().trim()
     var endLocation = $('#placename-2').val().trim()
     var typeOfTransport = $('#trans-type').val().trim()
@@ -210,6 +214,7 @@ $('#form-2').on('submit', function(event) {
             console.log(response)
             // remove dashboard animation
             $('#dashboard-anim').hide()
+            
 
             arrayOfSteps = response.trips[0].steps
             var sumOfTransport = 0
@@ -335,6 +340,7 @@ function printWeatherForecast (travelAPIresponse) {
     var cityLatitude = travelAPIresponse.trips[0].steps[1].location.latitude
 
     console.log(cityLatitude, cityLongitude)   //////
+
     // constructing a GET request to openweather API
     var unit = "metric"
     var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?lat=" + cityLatitude + "&lon="+ cityLongitude + "&units="+ unit + "&appid=6ba0b25bc07a2f8bbcb23b35a7bf0c21"    
@@ -419,8 +425,7 @@ function printWeatherForecast (travelAPIresponse) {
              
         }
 
-        // Append dynamically new button unto the history div and send to client local storage
-        // send to local from here
+        
 
     //    var testObj = {
     //         current: $('#today').html().trim(),
