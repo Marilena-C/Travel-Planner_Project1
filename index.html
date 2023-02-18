@@ -20,6 +20,7 @@
                   <a id="len1" class="hoverable" href="#">Home</a>
                   <a id="about-link" class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#aboutModal">About</a>
                  <a id="len4" class="hoverable" href="./contact-us-page.html">Contact</a>
+                 <a class="nav-item nav-link active"  href="#" data-toggle="modal" data-target="#newsModal">News</a>
               </div>
             </nav>
           </div>
@@ -53,7 +54,7 @@
         </div>
 
         <!-- added news modal along with content and css styling  -->
-                <!-- <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel" aria-hidden="true">
+                <div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header"> 
@@ -63,7 +64,7 @@
                         </button>
                       </div>
                       <div class="modal-body" style="background-color: #ffffff;">
-                        <img src="assets/images/team work.jpg" alt="numerous fist bumps" id="news"> 
+                        <div><img src="assets/images/team work.jpg" alt="numerous fist bumps" id="news"></div> 
                         <p>We're introducing new features!  
                           <br>
                           <ul>
@@ -87,11 +88,10 @@
                       </div>
                     </div>
                   </div>
-                </div> -->
-        <!-- Aside Forms -->
-      <!-- Aside Forms -->
+                </div>
       <div class="container-fluid" id="mainCont" style="max-width: 1400px">
         <div class="row">
+          <!-- SIMPLE SEARCH FORM -->
           <aside class="col-lg-3 col-md-6 pb-3">
             <h2 id="form-heading" class="mt-1 h3 form-label">
               Simple search
@@ -127,7 +127,7 @@
               </div>
               
           </aside>
-            
+        
           <div class="col-lg-6 col-md-12 pb-3">
             <section class="mt-3 hide mainDisplayCont" role="region" aria-live="polite">
                 <div class="card w-100 h-75 mainDataDisplay">
@@ -177,14 +177,10 @@
                   <div class="card" id = "forecast-3">  
                   </div>
                 </div>
-  
-                <!-- <div class="col">
-                  <div class="card" id = "forecast-5">   
-                  </div>
-                </div> -->
             </section>
              <br>
           </div>
+          <!-- ADVANCED SEARCH FORM -->
           <aside class="col-lg-3 col-md-6 pb-3">
             <h2 id="form-heading" class="mt-1 h3 form-label">
               Advanced search
@@ -223,8 +219,6 @@
                           <input type="text" id="trans-people" name="people" value="1">
                     </div>
                   </div>                  
-
-
                   <p><button class="btn btn-success btn-block" type="button" data-toggle="collapse" data-target="#collapseAccom" aria-expanded="false" aria-controls="collapseExample">
                     Add Accommodation
                   </button>
