@@ -1,4 +1,4 @@
-# Eco-trip: Making every mile counts
+# Eco-trip: Making every mile count
 
 ## Description 
 Eco-trip is a web based app that allows users estimate and keep track of the amount of Carbon emitted for trips between any two cities of the world, including the current and 3 days forecast weather condition for the destination city, built with HTML, CSS, Jquery, moment.js and two server APIs. 
